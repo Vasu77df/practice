@@ -1,9 +1,19 @@
-import os
+class Point:
 
-def make_at(path, dir_name):
-    original_path = os.getcwd()
-    try:
-        os.chdir(path)
-        os.mkdir(dir_name)
-    finally:
-        os.chdir(original_path)
+    def __init__(self, x, y):
+        print(f"creating new point with coordinates {x} and {y}")
+        self.x = x
+        self.y = y
+
+
+    def shift(self, x, y):
+        self.x = self.x + x
+        self.y = self.y + y
+
+
+p = Point(10, 20)
+print(p.x)
+print(p.y)
+
+
+
